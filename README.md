@@ -7,7 +7,7 @@
 
 ## 🧠 Sobre mí
 
-Soy estudiante próximo a egresar de la carrera de **Ingeniería en Desarrollo de Software Multiplataforma** en la **UTSV**.  
+Soy egresado en **Ingeniería en Desarrollo de Software Multiplataforma** de la **UTSV**.  
 Me enfoco en el desarrollo de aplicaciones web y backend, creando soluciones funcionales, escalables y orientadas a resolver problemas reales.
 
 Me gusta trabajar con tecnologías modernas, aprender constantemente y mejorar mis proyectos tanto a nivel técnico como visual.
