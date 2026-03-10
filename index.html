@@ -1,191 +1,450 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Jorge Valencia | Desarrollador de Software</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge Raúl Valencia Santos — Dev Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Fraunces:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Jorge Valencia</a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Tecnologías</a></li>
-                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── NAVEGACIÓN ── -->
+  <nav>
+    <a href="#hero" class="nav-logo">JVS.dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#repos">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="CV/CV_Jorge_Valencia_Santos.pdf" target="_blank" class="btn-cv-nav">⬇ Descargar CV</a>
+      <a href="#contact" class="nav-cta">Contáctame →</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="status-dot"></span>
+        Disponible para proyectos
+      </div>
+      <h1>
+        <span class="line1">Jorge<br><span class="accent-word">Valencia</span></span>
+        <span class="line2">Santos.</span>
+      </h1>
+      <p class="hero-desc">
+        <span>Software Engineer & AI Developer</span> con base en Coatzacoalcos, Veracruz.<br>
+        Construyo sistemas <span>full-stack</span>, apps <span>móviles</span> y herramientas de
+        <span>inteligencia artificial</span> que resuelven problemas reales.
+      </p>
+      <div class="hero-actions">
+        <a href="#repos" class="btn-primary">
+          Ver proyectos
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://jorkel79.github.io/cv/CV_Jorge_Valencia_Santos.pdf" target="_blank" class="btn-dl">⬇ Descargar CV</a>
+        <a href="#contact" class="btn-ghost">
+          Hablemos
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto -->
+    <div class="hero-photo-col">
+      <div class="photo-frame">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+        <div class="photo-inner">
+          <img
+            src="img/yo.jfif"
+            alt="Jorge Raúl Valencia Santos"
+            onerror="this.style.display='none';
+                     this.parentElement.style.background='linear-gradient(135deg,#0D1117,#1a1f2e)';
+                     this.parentElement.innerHTML+='<div class=\'photo-fallback\'>JVS</div>'"
+          >
         </div>
-    </div>
-</nav>
+        <div class="photo-tag">Jorge R. Valencia S.</div>
+      </div>
 
-<!-- HERO -->
-<section id="inicio" class="hero d-flex align-items-center">
-    <div class="container text-center">
-        <img src="img/Yo.png" class="rounded-circle mb-3" width="150">
-        <h1 class="fw-bold">Jorge Raúl Valencia Santos</h1>
-        <p class="lead">Ingeniero en Desarrollo de Software | Web & Backend</p>
-        <a href="cv/CV_Jorge_Valencia_Santos.pdf" class="btn btn-primary mt-2" download>Descargar CV</a>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Tecnologías</h2>
-        <div class="row text-center">
-            <div class="col-md-3">HTML / CSS / Bootstrap</div>
-            <div class="col-md-3">JavaScript</div>
-            <div class="col-md-3">PHP / Laravel</div>
-            <div class="col-md-3">Node.js</div>
-            <div class="col-md-3 mt-3">MongoDB</div>
-            <div class="col-md-3 mt-3">MySQL/MariaDB</div>
-            <div class="col-md-3 mt-3">Git / GitHub</div>
-            <div class="col-md-3 mt-3">PWA</div>
-            <div class="col-md-3 mt-3">.NET</div>
-            <div class="col-md-3 mt-3">AWS</div>
-            <div class="col-md-3 mt-3">Ionic</div>
-            <div class="col-md-3 mt-3">Python/LangChain/Jupiter</div>
-            <div class="col-md-3 mt-3">Hugging Face/Ai ethics</div>
-            <div class="col-md-3 mt-3">Docker</div>
-            <div class="col-md-3 mt-3">Postman/Thunderclient</div>
-            <div class="col-md-3 mt-3">Django/Sqlite/PostgreSQL</div>
-            <div class="col-md-3 mt-3">Render</div>
-            <div class="col-md-3 mt-3">Gunicorn</div>
+      <div class="photo-stats">
+        <div class="mini-stat">
+          <span class="mini-stat-label">Años coding</span>
+          <span class="mini-stat-val">4+</span>
         </div>
-    </div>
-</section>
-
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Habilidades</h2>
-        <div class="row text-center">
-            <div class="col-md-3">Trabajo colaborativo</div>
-            <div class="col-md-3">Comunicación efectiva</div>
-            <div class="col-md-3">Resolución de problemas</div>
-            <div class="col-md-3">Adaptabilidad</div>
-            <div class="col-md-3 mt-3">Pensamiento crítico</div>
-            <div class="col-md-3 mt-3">Codificación limpia</div>
-            <div class="col-md-3 mt-3">Gestión del tiempo</div>
-            <div class="col-md-3 mt-3">Aprendizaje continuo</div>
-            <div class="col-md-3 mt-3">Manejo de presión</div>
-            </div>
-    </div>
-</section>
-<!-- PROYECTOS -->
-<section id="proyectos" class="bg-light py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Proyectos</h2>
-
-        <div class="row g-4 justify-content-center">
-
-            <!-- PROYECTO 1 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card shadow h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">MEJY</h5>
-                        <p class="card-text">
-                            Sistema de inventario de medidores de agua para CAEV Nanchital.
-                        </p>
-                        <p><strong>Tecnologías:</strong> PHP, MongoDB, Bootstrap</p>
-
-                        <a href="https://github.com/Mejy-medidores/medidores.git"
-                           class="btn btn-outline-dark btn-sm mt-auto">
-                           Repositorio
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROYECTO 2 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card shadow h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">SecuPass</h5>
-                        <p class="card-text">
-                            Sistema generador de contraseñas seguras y guardado de las mismas.
-                        </p>
-                        <p><strong>Tecnologías:</strong> Bootstrap, Node.js, JavaScript, MySQL</p>
-
-                        <a href="https://github.com/Jorkel79/Proyecto_WEBINTEGRAL.git"
-                           class="btn btn-outline-dark btn-sm mt-auto">
-                           Repositorio
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-             <!-- PROYECTO 3 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card shadow h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Devnotes-Docker</h5>
-                        <p class="card-text">
-                            Sistema backend de notas conectados a MongoDB de manera virtual usando Docker.
-                        </p>
-                        <p><strong>Tecnologías:</strong>Node.js 20 LTS, Docker & Docker Compose, Thunderclient, MongoDB 7 (Docker), Mongoose y Express</p>
-
-                        <a href="https://github.com/Jorkel79/devnotes-docker-api"
-                           class="btn btn-outline-dark btn-sm mt-auto">
-                           Repositorio
-                        </a>
-                    </div>
-                </div>
-            
-
+        <div class="mini-stat">
+          <span class="mini-stat-label">Tecnologías</span>
+          <span class="mini-stat-val">20+</span>
         </div>
-    </div>
-
-            <!-- PROYECTO 4 -->
-            <div class="col-md-4 col-sm-6">
-                <div class="card shadow h-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Almacen Django con deploy</h5>
-                        <p class="card-text">
-                            Aplicación web desarrollada con Django para la gestión de inventario.
-                        </p>
-                        <p><strong>Tecnologías:</strong> Django, Python, PostgreSQL, Render, Gunicorn</p>
-
-                        <a href="https://github.com/Jorkel79/Proyecto-Django.git"
-                           class="btn btn-outline-dark btn-sm mt-auto">
-                           Repositorio
-                        </a>
-                        <a href="https://proyecto-django-jxkv.onrender.com"
-                           class="btn btn-outline-primary btn-sm mt-2">
-                           Deploy
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="mini-stat">
+          <span class="mini-stat-label">Certificaciones</span>
+          <span class="mini-stat-val">6</span>
         </div>
+      </div>
     </div>
 
-</section>
-
-
-<!-- CONTACTO -->
-<section id="contacto" class="py-5">
-    <div class="container text-center">
-        <h2>Si te interesa contactarme</h2>
-        <p>Email: <strong>valenciasantosjorgeraul@gmail.com</strong></p>
-        <a href="https://github.com/Jorkel79" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/jorge-ra%C3%BAl-valencia-santos-13016933b/" target="_blank">LinkedIn</a>
+    <div class="scroll-indicator">
+      <span class="scroll-line"></span>
+      Scroll to explore
     </div>
-</section>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ── TICKER ── -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="ticker-item">PHP &amp; Laravel</span>
+      <span class="ticker-item">Node.js</span>
+      <span class="ticker-item">React</span>
+      <span class="ticker-item">Ionic</span>
+      <span class="ticker-item">MongoDB</span>
+      <span class="ticker-item">Docker</span>
+      <span class="ticker-item">Django</span>
+      <span class="ticker-item">AWS</span>
+      <span class="ticker-item">LangChain</span>
+      <span class="ticker-item">HuggingFace</span>
+      <span class="ticker-item">Python</span>
+      <span class="ticker-item">PostgreSQL</span>
+      <span class="ticker-item">Git</span>
+      <span class="ticker-item">PWA</span>
+      <span class="ticker-item">AI Engineer</span>
+      <!-- repeat para loop continuo -->
+      <span class="ticker-item">PHP &amp; Laravel</span>
+      <span class="ticker-item">Node.js</span>
+      <span class="ticker-item">React</span>
+      <span class="ticker-item">Ionic</span>
+      <span class="ticker-item">MongoDB</span>
+      <span class="ticker-item">Docker</span>
+      <span class="ticker-item">Django</span>
+      <span class="ticker-item">AWS</span>
+      <span class="ticker-item">LangChain</span>
+      <span class="ticker-item">HuggingFace</span>
+      <span class="ticker-item">Python</span>
+      <span class="ticker-item">PostgreSQL</span>
+      <span class="ticker-item">Git</span>
+      <span class="ticker-item">PWA</span>
+      <span class="ticker-item">AI Engineer</span>
+    </div>
+  </div>
+
+  <!-- ── SOBRE MÍ ── -->
+  <section id="about">
+    <div class="about-text-col">
+      <div class="section-label reveal">Sobre mí</div>
+      <h2 class="reveal">Quien soy<br>&amp; cómo<br>trabajo.</h2>
+      <p class="about-text reveal">
+        Soy un <strong>Ingeniero en Desarrollo y Gestión de Software</strong> egresado de la UTSV,
+        con sólida experiencia en desarrollo web, apps móviles e inteligencia artificial aplicada.
+      </p>
+      <p class="about-text reveal">
+        Desde sistemas <strong>PHP/MongoDB</strong> en producción real hasta pipelines con
+        <strong>LangChain y HuggingFace</strong>. Me impulsa no conformarme con lo básico.
+      </p>
+      <p class="about-text reveal">
+        Tengo formación certificada en <strong>liderazgo</strong>, hablo <strong>inglés B1 CEFR</strong>
+        y valoro el trabajo en equipo como pilar del buen software.
+      </p>
+    </div>
+
+    <div class="about-visual reveal">
+      <div class="code-block main">
+        <code>
+          <span class="code-line"><span class="code-comment">// jorge.config.js</span></span>
+          <span class="code-line">&nbsp;</span>
+          <span class="code-line"><span class="code-keyword">const</span> <span class="code-var">jorge</span> = {</span>
+          <span class="code-line">  <span class="code-func">name</span>: <span class="code-string">"Jorge Valencia"</span>,</span>
+          <span class="code-line">  <span class="code-func">role</span>: <span class="code-string">"Full-Stack + AI Dev"</span>,</span>
+          <span class="code-line">  <span class="code-func">location</span>: <span class="code-string">"Coatzacoalcos, Ver."</span>,</span>
+          <span class="code-line">  <span class="code-func">stack</span>: [</span>
+          <span class="code-line">    <span class="code-string">"PHP"</span>, <span class="code-string">"Laravel"</span>, <span class="code-string">"Node.js"</span>,</span>
+          <span class="code-line">    <span class="code-string">"React"</span>, <span class="code-string">"Django"</span>, <span class="code-string">"Docker"</span>,</span>
+          <span class="code-line">    <span class="code-string">"Python"</span>, <span class="code-string">"AWS"</span>, <span class="code-string">"LangChain"</span></span>
+          <span class="code-line">  ],</span>
+          <span class="code-line">  <span class="code-func">english</span>: <span class="code-string">"B1 CEFR"</span>,</span>
+          <span class="code-line">  <span class="code-func">learning</span>: <span class="code-keyword">true</span>,</span>
+          <span class="code-line">};</span>
+        </code>
+      </div>
+      <div class="code-block overlay">
+        <span class="code-line" style="color:var(--accent1);font-size:11px;">✓ Disponible</span>
+        <span class="code-line" style="color:var(--muted);font-size:11px;margin-top:8px;">Veracruz, MX</span>
+        <span class="code-line" style="color:var(--muted);font-size:11px;margin-top:4px;">+52 921-310-7823</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HABILIDADES TÉCNICAS ── -->
+  <section id="skills">
+    <div class="section-label reveal">Habilidades Técnicas</div>
+    <h2 class="reveal">Stack<br>tecnológico.</h2>
+
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-card reveal" style="--width:80%"><span class="skill-category cat-frontend">Frontend</span><div class="skill-name">HTML5 / CSS</div><div class="skill-years">4 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:75%"><span class="skill-category cat-frontend">Frontend</span><div class="skill-name">Bootstrap</div><div class="skill-years">3 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:70%"><span class="skill-category cat-frontend">Frontend</span><div class="skill-name">JavaScript</div><div class="skill-years">3 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:65%"><span class="skill-category cat-frontend">Frontend</span><div class="skill-name">React</div><div class="skill-years">Cert. 2026</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <!-- Backend -->
+      <div class="skill-card reveal" style="--width:80%"><span class="skill-category cat-backend">Backend</span><div class="skill-name">PHP</div><div class="skill-years">4 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:70%"><span class="skill-category cat-backend">Backend</span><div class="skill-name">Laravel</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:70%"><span class="skill-category cat-backend">Backend</span><div class="skill-name">Node.js</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:55%"><span class="skill-category cat-backend">Backend</span><div class="skill-name">Django</div><div class="skill-years">Con deploy</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:40%"><span class="skill-category cat-backend">Backend</span><div class="skill-name">.NET</div><div class="skill-years">1 año</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <!-- Bases de datos -->
+      <div class="skill-card reveal" style="--width:80%"><span class="skill-category cat-db">BD</span><div class="skill-name">MongoDB</div><div class="skill-years">4 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:80%"><span class="skill-category cat-db">BD</span><div class="skill-name">MySQL</div><div class="skill-years">4 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:60%"><span class="skill-category cat-db">BD</span><div class="skill-name">MariaDB</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:55%"><span class="skill-category cat-db">BD</span><div class="skill-name">PostgreSQL</div><div class="skill-years">Proyectos</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:50%"><span class="skill-category cat-db">BD</span><div class="skill-name">SQLite</div><div class="skill-years">Proyectos</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <!-- AI / ML -->
+      <div class="skill-card reveal" style="--width:60%"><span class="skill-category cat-ai">AI/ML</span><div class="skill-name">Python</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:40%"><span class="skill-category cat-ai">AI/ML</span><div class="skill-name">LangChain</div><div class="skill-years">1 año</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:40%"><span class="skill-category cat-ai">AI/ML</span><div class="skill-name">HuggingFace</div><div class="skill-years">1 año</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:35%"><span class="skill-category cat-ai">AI/ML</span><div class="skill-name">Jupyter</div><div class="skill-years">1 año</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <!-- DevOps / Cloud / Tools -->
+      <div class="skill-card reveal" style="--width:40%"><span class="skill-category cat-devops">Cloud</span><div class="skill-name">AWS</div><div class="skill-years">1 año</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:55%"><span class="skill-category cat-devops">DevOps</span><div class="skill-name">Docker</div><div class="skill-years">Proyectos</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:70%"><span class="skill-category cat-devops">DevOps</span><div class="skill-name">Git / GitHub</div><div class="skill-years">Certificado</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:50%"><span class="skill-category cat-devops">Deploy</span><div class="skill-name">Render / Gunicorn</div><div class="skill-years">Apps live</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:60%"><span class="skill-category cat-devops">Tools</span><div class="skill-name">Postman</div><div class="skill-years">API testing</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <!-- Mobile -->
+      <div class="skill-card reveal" style="--width:65%"><span class="skill-category cat-mobile">Mobile</span><div class="skill-name">Ionic</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+      <div class="skill-card reveal" style="--width:65%"><span class="skill-category cat-mobile">Mobile</span><div class="skill-name">PWA</div><div class="skill-years">2 años</div><div class="skill-bar"><div class="skill-fill"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ── HABILIDADES BLANDAS ── -->
+  <section id="softskills">
+    <div class="section-label reveal">Habilidades Blandas</div>
+    <h2 class="reveal">Más allá<br>del código.</h2>
+
+    <div class="soft-grid">
+      <div class="soft-card reveal"><span class="soft-icon">🤝</span><span class="soft-name">Trabajo colaborativo</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">💬</span><span class="soft-name">Comunicación efectiva</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🧩</span><span class="soft-name">Resolución de problemas</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🔄</span><span class="soft-name">Adaptabilidad</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🧠</span><span class="soft-name">Pensamiento crítico</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">✨</span><span class="soft-name">Codificación limpia</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">⏱</span><span class="soft-name">Gestión del tiempo</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">📚</span><span class="soft-name">Aprendizaje continuo</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">💪</span><span class="soft-name">Manejo de presión</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🏆</span><span class="soft-name">Liderazgo certificado</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🌐</span><span class="soft-name">Inglés B1 CEFR</span></div>
+      <div class="soft-card reveal"><span class="soft-icon">🎯</span><span class="soft-name">Orientación a resultados</span></div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCIA ── -->
+  <section id="experience">
+    <div class="section-label reveal">Experiencia</div>
+    <h2 class="reveal">Dónde he<br>trabajado.</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">
+          Ene 2021 — Mayo 2025
+          <span class="timeline-duration">4+ años</span>
+        </div>
+        <div class="timeline-company">Mejy – CAEV</div>
+        <div class="timeline-role">Software Engineer</div>
+        <p class="timeline-desc">
+          Desarrollo completo de software de negocio usando PHP como stack principal.
+          Sistema de inventario de medidores de agua para CAEV Nanchital.
+          Diseño e implementación de base de datos en MongoDB.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Full Cycle Dev</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot dot-purple"></div>
+        <div class="timeline-period">
+          Mayo 2023 — Marzo 2025
+          <span class="timeline-duration timeline-duration--purple">23 meses</span>
+        </div>
+        <div class="timeline-company">UTSV – Intern</div>
+        <div class="timeline-role">Apps Developer</div>
+        <p class="timeline-desc">
+          Apps móviles multiplataforma con Ionic como frontend, comunicando por HTTP con backend
+          Laravel. APIs RESTful con autenticación y lógica de negocio. Colaboración en equipo con Git.
+        </p>
+        <div class="timeline-tags">
+          <span class="tag">Ionic</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">RESTful API</span>
+          <span class="tag">Git</span>
+          <span class="tag">Auth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICACIONES ── -->
+  <section id="certifications">
+    <div class="section-label reveal">Certificaciones</div>
+    <h2 class="reveal">Formación<br>continua.</h2>
+
+    <div class="certs-grid">
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-uni">Universidad UTSV</div><div class="cert-title">Ingeniería en Desarrollo y Gestión de Software</div><div class="cert-meta"><span>Carta de Pasante</span><span>Jun 2025</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-udemy">Udemy</div><div class="cert-title">The AI Engineer Course 2025: Complete AI Engineer Bootcamp</div><div class="cert-meta"><span>365 Careers</span><span>Oct 2025 · 29h</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-udemy">Udemy</div><div class="cert-title">Modern React From The Beginning</div><div class="cert-meta"><span>Brad Traversy</span><span>Ene 2026 · 25.5h</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-udemy">Udemy</div><div class="cert-title">Introduction to AWS: Understand AWS Basics</div><div class="cert-meta"><span>Rick Crisci</span><span>Ago 2025 · 4.5h</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-udemy">Udemy</div><div class="cert-title">Ultimate GIT: Gestiona tus proyectos y trabaja en equipo</div><div class="cert-meta"><span>Nicolas Schurmann</span><span>Jun 2024 · 5.5h</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-udemy">Udemy</div><div class="cert-title">Supervisor Leadership Skills for a Safe Workplace</div><div class="cert-meta"><span>Marie-Claire Ross</span><span>Ene 2026 · 1h</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-english">The Institute TITUELS</div><div class="cert-title">B1 Level — CEFR English Program</div><div class="cert-meta"><span>Inglés certificado</span><span>Ago 2019</span></div></div>
+      <div class="cert-card reveal"><div class="cert-check">✓</div><div class="cert-source cert-cetec">CETEC Coatzacoalcos</div><div class="cert-title">Técnico en Sistemas Computacionales &amp; Técnico en Inglés</div><div class="cert-meta"><span>2 diplomas</span><span>2017</span></div></div>
+    </div>
+  </section>
+
+  <!-- ── REPOSITORIOS ── -->
+  <section id="repos">
+    <div class="section-label reveal">Proyectos</div>
+    <h2 class="reveal">Repositorios<br>reales.</h2>
+    <p class="repos-intro reveal">Proyectos construidos con tecnologías reales, en producción y con deploys activos.</p>
+    <a href="https://github.com/Jorkel79" target="_blank" class="github-link reveal">
+      github.com/Jorkel79
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <div class="repos-list">
+
+      <div class="repo-card reveal">
+        <div class="repo-number">01</div>
+        <div class="repo-icon">💧</div>
+        <div class="repo-name">MEJY — CAEV Medidores</div>
+        <div class="repo-desc">Sistema de inventario de medidores de agua para CAEV Nanchital. Proyecto empresarial real con gestión completa de recursos hídricos.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="stack-dot" style="background:#777BB3"></span>PHP</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#4DB33D"></span>MongoDB</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#7952B3"></span>Bootstrap</span>
+        </div>
+        <div class="repo-btns">
+          <a href="https://github.com/Mejy-medidores/medidores.git" target="_blank" class="repo-link-btn">Ver repo →</a>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-number">02</div>
+        <div class="repo-icon">🔐</div>
+        <div class="repo-name">SecuPass</div>
+        <div class="repo-desc">Generador y gestor de contraseñas seguras. Aplicación web integral con backend Node.js y almacenamiento en MySQL.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="stack-dot" style="background:#F7DF1E"></span>JavaScript</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#68A063"></span>Node.js</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#4479A1"></span>MySQL</span>
+        </div>
+        <div class="repo-btns">
+          <a href="https://github.com/Jorkel79/Proyecto_WEBINTEGRAL.git" target="_blank" class="repo-link-btn">Ver repo →</a>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-number">03</div>
+        <div class="repo-icon">🐋</div>
+        <div class="repo-name">Devnotes — Docker API</div>
+        <div class="repo-desc">Sistema backend de notas con MongoDB virtualizado mediante Docker &amp; Docker Compose. API robusta con Express y Mongoose.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="stack-dot" style="background:#68A063"></span>Node.js 20 LTS</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#2496ED"></span>Docker</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#4DB33D"></span>MongoDB 7</span>
+        </div>
+        <div class="repo-btns">
+          <a href="https://github.com/Jorkel79/devnotes-docker-api" target="_blank" class="repo-link-btn">Ver repo →</a>
+        </div>
+      </div>
+
+      <div class="repo-card reveal">
+        <div class="repo-number">04</div>
+        <div class="repo-icon">🏪</div>
+        <div class="repo-name">Almacén Django</div>
+        <div class="repo-desc">Aplicación web de gestión de inventario con Django y PostgreSQL. Desplegada en producción — ¡está corriendo en Render ahora mismo!</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="stack-dot" style="background:#3776AB"></span>Python / Django</span>
+          <span class="repo-lang"><span class="stack-dot" style="background:#336791"></span>PostgreSQL</span>
+        </div>
+        <div class="repo-btns">
+          <a href="https://github.com/Jorkel79/Proyecto-Django.git" target="_blank" class="repo-link-btn">Ver repo →</a>
+          <a href="https://proyecto-django-jxkv.onrender.com" target="_blank" class="repo-link-btn deploy">🚀 Deploy live →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACTO ── -->
+  <section id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-inner">
+      <div class="section-label reveal" style="justify-content:center">Contacto</div>
+      <h2 class="reveal">¿Trabajamos<br><span class="italic">juntos?</span></h2>
+      <p class="about-text reveal contact-sub">
+        Estoy abierto a nuevas oportunidades, proyectos freelance y colaboraciones.
+        No dudes en escribirme.
+      </p>
+
+      <div class="contact-links reveal">
+        <a href="mailto:valenciasantosjorgeraul@gmail.com" class="contact-link">
+          <span class="contact-link-icon">✉</span>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">Gmail</span>
+        </a>
+        <a href="https://wa.me/529213107823" target="_blank" class="contact-link">
+          <span class="contact-link-icon">📱</span>
+          <span class="contact-link-label">WhatsApp</span>
+          <span class="contact-link-value">+52 921-310-7823</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jorge-ra%C3%BAl-valencia-santos-13016933b/" target="_blank" class="contact-link">
+          <span class="contact-link-icon">💼</span>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">jorge-raúl</span>
+        </a>
+        <a href="https://github.com/Jorkel79" target="_blank" class="contact-link">
+          <span class="contact-link-icon">⌨</span>
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">@Jorkel79</span>
+        </a>
+      </div>
+
+      <div class="cv-banner reveal">
+        <div class="cv-banner-text">
+          <div class="cv-banner-label">Descarga gratuita</div>
+          <div class="cv-banner-title">Curriculum Vitae completo</div>
+        </div>
+        <a href="CV/CV_Jorge_Valencia_Santos.pdf" target="_blank" class="btn-cv-big">
+          ⬇ Descargar CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p class="footer-text">© 2025 <span>Jorge Raúl Valencia Santos</span>. Todos los derechos reservados.</p>
+    <p class="footer-text">Diseñado con ✦ en Coatzacoalcos, Ver.</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
